@@ -56,8 +56,6 @@ class ParserSumut(ParserBase):
             'div/center/span[2]'
         ).text
 
-        print(positive, recover, dead)
-
         return {
             "positif": int(positive),
             "sembuh": int(recover),
