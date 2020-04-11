@@ -5,6 +5,8 @@ from src.model.parser.banten import ParserBanten
 from src.model.parser.ntb import ParserNTB
 from src.model.parser.sulsel import ParserSulsel
 
+parser_pusat = ParserPusat()
+
 # key from province in https://inacovid19.maps.arcgis.com/apps/opsdashboard/index.html#/4411f5e9c69d4ca4be31ac805a0267be
 parsers_daerah = {
     "Aceh": ParserAceh(render="html"),
@@ -14,5 +16,3 @@ parsers_daerah = {
     "Nusa Tenggara Barat": ParserNTB(render="html"),
     "Sulawesi Selatan": ParserSulsel(render="html"),
 }
-
-parser_pusat = ParserPusat()
