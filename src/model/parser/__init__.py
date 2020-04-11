@@ -1,10 +1,22 @@
+import pytz
+
+from datetime import datetime
 from src.model.parser.pusat import ParserPusat
 from src.model.parser.aceh import ParserAceh
 from src.model.parser.bali import ParserBali
 from src.model.parser.banten import ParserBanten
+from src.model.parser.jabar import ParserJaBar
+from src.model.parser.jateng import ParserJaTeng
+from src.model.parser.jatim import ParserJaTim
+from src.model.parser.kalbar import ParserKalBar
 from src.model.parser.ntb import ParserNTB
 from src.model.parser.sulsel import ParserSulsel
 from src.model.parser.sumut import ParserSumut
+
+
+WAKTU_JALAN = datetime.now().astimezone(pytz.timezone("Asia/Jakarta"))
+WAKTU_JALAN_STR = WAKTU_JALAN.strftime("%Y-%m-%d %H:%M:%S")
+
 
 parser_pusat = ParserPusat()
 
@@ -13,6 +25,10 @@ parsers_daerah = {
     "Aceh": ParserAceh(render="html"),
     "Bali": ParserBali(render="html"),
     "Banten": ParserBanten(render="html"),
+    "Jawa Barat": ParserJaBar(render="html"),
+    "Jawa Tengah": ParserJaTeng(render="html"),
+    "Jawa Timur": ParserJaTim(render="html"),
+    "Kalimantan Barat": ParserKalBar(render="html"),
     "Nusa Tenggara Barat": ParserNTB(render="html"),
     "Sulawesi Selatan": ParserSulsel(render="html"),
     "Sumatera Utara": ParserSumut(render="html")
