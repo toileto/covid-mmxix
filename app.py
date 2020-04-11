@@ -17,6 +17,7 @@ def write_readme(namafile):
 
 
 cols = ["positif", "sembuh", "meninggal"]
+
 data_overview = parser_pusat.get_overview()
 
 # check each province
@@ -35,7 +36,10 @@ for k in data_semua_provinsi.keys():
                 "sumber": prov_parser.WEB_URL
             })
         except:
-            data_semua_provinsi[k].update({"error": True})
+            data_semua_provinsi[k].update({
+                "error": True,
+                "sumber": prov_parser.WEB_URL
+            })
 
 # data formatting
 tabel_data_provinsi = visualize_province_table(data_semua_provinsi)

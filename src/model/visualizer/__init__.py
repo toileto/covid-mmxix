@@ -23,7 +23,7 @@ def visualize_province_table(data):
         tds += f'<td class="province">{k}</td>'
         tds += f'<td class="national-positive">{v["pusat"]["positif"]}</td>'
         tds += f'<td class="national-recover">{v["pusat"]["sembuh"]}</td>'
-        tds += f'<td class="national-deadd">{v["pusat"]["meninggal"]}</td>'
+        tds += f'<td class="national-dead">{v["pusat"]["meninggal"]}</td>'
         if v.get("daerah"):
             tds += f'<td class="regional-positive">{v["daerah"]["positif"]} <span class="diff-positive">({diff["positif"]})</span></td>'
             tds += f'<td class="regional-recover">{v["daerah"]["sembuh"]} <span class="diff-recover">({diff["sembuh"]})</span></td>'

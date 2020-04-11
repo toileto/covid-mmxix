@@ -30,6 +30,7 @@ class ParserPusat(object):
     def get_province_data(self):
         result = {}
         data = self.parse_province_data()
+        data.sort(key=lambda x: x["provinsi"])
         for d in data:
             province = d["provinsi"]
             del d["provinsi"]

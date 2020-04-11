@@ -20,7 +20,6 @@ parsers_daerah = {
     "Aceh": ParserAceh(render="html"),
     "Bali": ParserBali(render="html"),
     "Banten": ParserBanten(render="html"),
-    "Banten": ParserBanten(render="html"),
     "Nusa Tenggara Barat": ParserNTB(render="html"),
     "Sulawesi Selatan": ParserSulsel(render="html"),
 }
