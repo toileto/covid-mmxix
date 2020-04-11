@@ -37,3 +37,18 @@ class ParserPusat(object):
 
         return result
 
+    def get_overview(self):
+        data = [
+            self.render_data.find(text="Terkonfirmasi"),
+            self.render_data.find(text="Sembuh"),
+            self.render_data.find(text="Meninggal"),
+        ]
+
+        for i, d in enumerate(data):
+            data[i] = d.parent.parent.parent.parent.parent.parent.contents[3].text.strip().replace("," , "")
+
+        return {
+            "positif": int(data[0]),
+            "sembuh": int(data[1]),
+            "meninggal": int(data[2]),
+        }

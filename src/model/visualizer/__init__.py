@@ -37,7 +37,7 @@ def visualize_province_table(data):
         tbody += f'        <tr>{tds}</tr>\n'
 
 
-    return f"""<table border="1">
+    return f"""<table>
     <thead>
         <tr>
             <th rowspan=2 style="text-align:center">Provinsi</th>
@@ -65,3 +65,9 @@ def visualize_province_table(data):
         </tr>
     </tfoot>
 </table>"""
+
+
+def visualize_overview(data):
+    return f"""| Positif | Sembuh | Meninggal |
+|--|--|--|
+| {data['positif']} | {data['sembuh']} | {data['meninggal']} |"""
