@@ -4,6 +4,7 @@ from src.model.parser.bali import ParserBali
 from src.model.parser.banten import ParserBanten
 from src.model.parser.ntb import ParserNTB
 from src.model.parser.sulsel import ParserSulsel
+from src.model.parser.sumut import ParserSumut
 
 parser_pusat = ParserPusat()
 
@@ -12,7 +13,7 @@ parsers_daerah = {
     "Aceh": ParserAceh(render="html"),
     "Bali": ParserBali(render="html"),
     "Banten": ParserBanten(render="html"),
-    "Banten": ParserBanten(render="html"),
     "Nusa Tenggara Barat": ParserNTB(render="html"),
     "Sulawesi Selatan": ParserSulsel(render="html"),
+    "Sumatera Utara": ParserSumut(render="html")
 }
