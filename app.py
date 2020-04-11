@@ -3,20 +3,21 @@ from src.model.parser import parser_pusat, parsers_daerah, WAKTU_JALAN_STR
 from src.model.visualizer import visualize_province_table, visualize_overview
 
 
+STATUS = ["positif", "sembuh", "meninggal"]
+WAKTU_JALAN_STR = WAKTU_JALAN_STR[:16]
+
 def write_readme(namafile):
     with open(namafile, "w") as f:
         f.write("# covid-mmxix\n")
-        f.write(f"#### Update: {WAKTU_JALAN_STR[:16]} WIB\n")
+        f.write(f"#### Update: {WAKTU_JALAN_STR} WIB\n")
         f.write("\n\n<br>\n\n")
-        f.write(f"### Selisih Pusat vs Daerah\n")
+        f.write(f"## Selisih Pusat vs Daerah\n")
         f.write(f"Sumber Pusat: {parser_pusat.DATA_URL}\n")
         f.write(tabel_data_provinsi)
-        f.write("\n\n<br>\n\n")
+        f.write("\n\n")
         f.write(f"### Overview Pusat\n")
         f.write(tabel_overview)
 
-
-cols = ["positif", "sembuh", "meninggal"]
 
 data_overview = parser_pusat.get_overview()
 
@@ -28,7 +29,7 @@ for k in data_semua_provinsi.keys():
         try:
             data = prov_parser.get_data_html()
             diff = {}
-            for c in cols:
+            for c in STATUS:
                 diff[c] = data[c] - data_semua_provinsi[k]["pusat"][c]
             data_semua_provinsi[k].update({
                 "daerah": data,
