@@ -9,6 +9,7 @@ from src.model.parser.jabar import ParserJaBar
 from src.model.parser.jateng import ParserJaTeng
 from src.model.parser.jatim import ParserJaTim
 from src.model.parser.kalbar import ParserKalBar
+from src.model.parser.kalsel import ParserKalSel
 from src.model.parser.ntb import ParserNTB
 from src.model.parser.sulsel import ParserSulsel
 
@@ -28,6 +29,7 @@ parsers_daerah = {
     "Jawa Tengah": ParserJaTeng(render="html"),
     "Jawa Timur": ParserJaTim(render="html"),
     "Kalimantan Barat": ParserKalBar(render="html"),
+    "Kalimantan Selatan": ParserKalSel(render="html"),
     "Nusa Tenggara Barat": ParserNTB(render="html"),
     "Sulawesi Selatan": ParserSulsel(render="html"),
 }
