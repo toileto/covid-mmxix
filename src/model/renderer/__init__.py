@@ -4,15 +4,18 @@ import time
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 
 chrome_options = Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--start-maximized')
+chrome_options.add_argument('--no-sandbox')
 
 def render_html(url, render_time=5):
     driver = webdriver.Chrome(
-        os.getenv("CHROMEDRIVER_PATH"),
-        chrome_options=chrome_options)
+        ChromeDriverManager().install(),
+        chrome_options=chrome_options
+    )
 
     driver.get(url)
     time.sleep(render_time)

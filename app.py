@@ -1,4 +1,8 @@
 from src.model.parser import parser_pusat, parsers_daerah
+from pyvirtualdisplay import Display
+
+display = Display(visible=0, size=(800, 600))
+display.start()
 
 cols = ["positif", "sembuh", "meninggal"]
 
@@ -23,3 +27,5 @@ for k in all_data.keys():
 
 for k, v in all_data.items():
     print(k, v)
+
+display.stop()
