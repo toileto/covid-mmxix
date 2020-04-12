@@ -1,11 +1,11 @@
 from src.model.parser.base import ParserBase
 
-class ParserSulsel(ParserBase):
+class ParserSulSel(ParserBase):
     WEB_URL = "https://covid19.sulselprov.go.id"
     DATA_URL = "https://covid19.sulselprov.go.id"
 
     def __init__(self, render=None):
-        super(ParserSulsel, self).__init__(render)
+        super(ParserSulSel, self).__init__(render)
 
     def parse(self, source):
         body = source.find_all("div", {"class": "col-lg-4"})
