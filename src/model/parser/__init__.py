@@ -2,16 +2,22 @@ import pytz
 
 from datetime import datetime
 from src.model.parser.pusat import ParserPusat
+
 from src.model.parser.aceh import ParserAceh
+from src.model.parser.riau import ParserRiau
+
 from src.model.parser.bali import ParserBali
 from src.model.parser.banten import ParserBanten
 from src.model.parser.jabar import ParserJaBar
 from src.model.parser.jateng import ParserJaTeng
 from src.model.parser.jatim import ParserJaTim
+
 from src.model.parser.kalbar import ParserKalBar
 from src.model.parser.kalsel import ParserKalSel
+
 from src.model.parser.ntb import ParserNTB
 from src.model.parser.ntt import ParserNTT
+
 from src.model.parser.sulbar import ParserSulBar
 from src.model.parser.sulsel import ParserSulSel
 from src.model.parser.sultra import ParserSulTra
@@ -36,6 +42,7 @@ parsers_daerah = {
     "Kalimantan Selatan": ParserKalSel(render="html"),
     "Nusa Tenggara Barat": ParserNTB(render="html"),
     "Nusa Tenggara Timur": ParserNTT(render="html"),
+    "Riau": ParserRiau(render="html"),
     "Sulawesi Barat": ParserSulBar(render="html"),
     "Sulawesi Selatan": ParserSulSel(render="html"),
     "Sulawesi Tenggara": ParserSulTra(render="html"),
