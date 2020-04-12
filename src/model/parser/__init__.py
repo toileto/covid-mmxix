@@ -14,6 +14,7 @@ from src.model.parser.ntb import ParserNTB
 from src.model.parser.ntt import ParserNTT
 from src.model.parser.sulbar import ParserSulBar
 from src.model.parser.sulsel import ParserSulSel
+from src.model.parser.sultra import ParserSulTra
 
 
 WAKTU_JALAN = datetime.now().astimezone(pytz.timezone("Asia/Jakarta"))
@@ -36,4 +37,5 @@ parsers_daerah = {
     "Nusa Tenggara Timur": ParserNTT(render="html"),
     "Sulawesi Barat": ParserSulBar(render="html"),
     "Sulawesi Selatan": ParserSulSel(render="html"),
+    "Sulawesi Tenggara": ParserSulTra(render="html"),
 }
