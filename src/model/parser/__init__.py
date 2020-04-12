@@ -4,6 +4,7 @@ from datetime import datetime
 from src.model.parser.pusat import ParserPusat
 
 from src.model.parser.aceh import ParserAceh
+from src.model.parser.jambi import ParserJambi
 from src.model.parser.riau import ParserRiau
 
 from src.model.parser.bali import ParserBali
@@ -37,6 +38,7 @@ parsers_daerah = {
     "Aceh": ParserAceh(render="html"),
     "Bali": ParserBali(render="html"),
     "Banten": ParserBanten(render="html"),
+    "Jambi": ParserJambi(render="html"),
     "Jawa Barat": ParserJaBar(render="html"),
     "Jawa Tengah": ParserJaTeng(render="html"),
     "Jawa Timur": ParserJaTim(render="html"),
