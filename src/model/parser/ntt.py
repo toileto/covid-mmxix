@@ -15,9 +15,9 @@ class ParserNTT(ParserBase):
             text="Positif"
         ).parent.parent.parent.text.strip().split()
 
-        positive = data[0]
-        recover = data[2]
-        dead = data[4]
+        positive = data[0].strip()
+        recover = data[2].strip()
+        dead = data[4].strip()
 
         return {
             "positif": int(positive),

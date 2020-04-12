@@ -10,9 +10,10 @@ class ParserJaBar(ParserBase):
     def parse(self, source):
         body = source.find_all("div", {"class": "flex justify-between items-baseline text-2xl"})
         data = [x.text.split()[-1].strip() for x in body]
-        positive = data[0]
-        recover = data[1]
-        dead = data[2]
+
+        positive = data[0].strip()
+        recover = data[1].strip()
+        dead = data[2].strip()
 
         return {
             "positif": int(positive),

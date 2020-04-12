@@ -10,6 +10,7 @@ class ParserKalBar(ParserBase):
     def parse(self, source):
         body = source.find_all("h1", {"class": "elementor-heading-title"})
         data = [x.text.strip() for x in body]
+
         positive = data[0]
         recover = data[1]
         dead = data[2]

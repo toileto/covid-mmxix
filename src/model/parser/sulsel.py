@@ -13,9 +13,9 @@ class ParserSulSel(ParserBase):
 
         value = [d.text.split()[0] for d in data]
 
-        positive = value[0]
-        recover = value[3]
-        dead = value[5]
+        positive = value[0].strip()
+        recover = value[3].strip()
+        dead = value[5].strip()
 
         return {
             "positif": int(positive),

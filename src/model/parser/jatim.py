@@ -10,6 +10,7 @@ class ParserJaTim(ParserBase):
     def parse(self, source):
         body = source.find("div", {"class": "jumlah-status"})
         data = body.find("div").text.strip().split()
+
         positive = body.find("label").text.strip().split()[0].strip()
         recover = data[1].strip()
         dead = data[7].strip()

@@ -12,9 +12,9 @@ class ParserBanten(ParserBase):
         data = body[2].p.text.strip().split("\n")
         value = [d.strip().split()[0] for d in data]
 
-        positive = value[0]
-        recover = value[2]
-        dead = value[3]
+        positive = value[0].strip()
+        recover = value[2].strip()
+        dead = value[3].strip()
 
         return {
             "positif": int(positive),

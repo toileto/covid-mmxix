@@ -12,7 +12,8 @@ class ParserSulUt(ParserBase):
         data = [b.text.strip() for b in body]
 
         positive = source.find_all(
-            "div", {"class": "price-center"})[-1].text.strip().split()[0].strip()
+            "div", {"class": "price-center"}
+        )[-1].text.strip().split()[0].strip()
         recover = source.find(
             "i", {"class": "fa-check"}).parent.b.text.strip()
         dead = source.find(

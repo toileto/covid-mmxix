@@ -15,8 +15,8 @@ class ParserNTB(ParserBase):
         body = source.find_all("div", {"class": "col-md-4"})
         data =  body[2].find_all("span")
         value = [d.text.strip().split()[0] for d in data]
-        recover = value[2]
-        dead = value[3]
+        recover = value[2].strip()
+        dead = value[3].strip()
 
         return {
             "positif": int(positive),

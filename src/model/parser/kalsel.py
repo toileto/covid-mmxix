@@ -10,6 +10,7 @@ class ParserKalSel(ParserBase):
     def parse(self, source):
         body = source.find_all("span", {"class": "h1 font-weight-bolder mb-0 text-white"})
         data = [x.text.strip() for x in body]
+
         positive = data[8]
         recover = data[11]
         dead = data[10]
