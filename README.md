@@ -1,10 +1,11 @@
-# covid-mmxix
-#### Update: 2020-04-11 15:00 WIB
-
+# ina-covid-mmxix
+Dashboard untuk menampilkan tingkat keseragaman data statistik kasus COVID-19 di Indonesia antara pusat & daerah. \
+[Klik tautan ini untuk informasi lebih lanjut](INFO.md)
 
 <br>
 
-### Selisih Pusat vs Daerah
+#### Update: 2020-04-11 15:00 WIB
+## Selisih Pusat vs Daerah
 Sumber Pusat: https://inacovid19.maps.arcgis.com/apps/opsdashboard/index.html#/4411f5e9c69d4ca4be31ac805a0267be
 <table>
     <thead>
@@ -69,7 +70,6 @@ Sumber Pusat: https://inacovid19.maps.arcgis.com/apps/opsdashboard/index.html#/4
         </tr>
     </tfoot>
 </table>
-
 <br>
 
 ### Overview Pusat

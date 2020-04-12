@@ -8,13 +8,15 @@ WAKTU_JALAN_STR = WAKTU_JALAN_STR[:16]
 
 def write_readme(namafile):
     with open(namafile, "w") as f:
-        f.write("# covid-mmxix\n")
+        f.write("# ina-covid-mmxix\n")
+        f.write(f"Dashboard untuk menampilkan tingkat keseragaman data statistik kasus COVID-19 di Indonesia antara pusat & daerah. \\\n")
+        f.write(f"[Klik tautan ini untuk informasi lebih lanjut](INFO.md)\n")
+        f.write("\n<br>\n\n")
         f.write(f"#### Update: {WAKTU_JALAN_STR} WIB\n")
-        f.write("\n\n<br>\n\n")
         f.write(f"## Selisih Pusat vs Daerah\n")
         f.write(f"Sumber Pusat: {parser_pusat.DATA_URL}\n")
         f.write(tabel_data_provinsi)
-        f.write("\n\n")
+        f.write("\n<br>\n\n")
         f.write(f"### Overview Pusat\n")
         f.write(tabel_overview)
 
