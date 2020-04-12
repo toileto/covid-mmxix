@@ -58,9 +58,9 @@ def visualize_province_table(data):
     <tfoot>
         <tr>
             <td><b>TOTAL</b></td>
-            <td>{total_positive}</td>
-            <td>{total_recover}</td>
-            <td>{total_dead}</td>
+            <td><b>{total_positive}</b></td>
+            <td><b>{total_recover}</b></td>
+            <td><b>{total_dead}</b></td>
             <td colspan=4></td>
         </tr>
     </tfoot>

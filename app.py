@@ -36,7 +36,8 @@ for k in data_semua_provinsi.keys():
                 "selisih": diff,
                 "sumber": prov_parser.WEB_URL
             })
-        except:
+        except Exception as e:
+            print(e)
             data_semua_provinsi[k].update({
                 "error": True,
                 "sumber": prov_parser.WEB_URL
