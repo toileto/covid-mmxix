@@ -9,9 +9,9 @@ class ParserBali(ParserBase):
 
     def parse(self, source):
         body = source.find_all("div", {"class": "col-md-3"})
-        positive = body[0].find("h3").text.replace(" Org", "")
-        recover = body[2].find("h3").text.replace(" Org", "")
-        dead = body[3].find("h3").text.replace(" Org", "")
+        positive = body[0].find("h3").text.replace(" Org", "").strip()
+        recover = body[2].find("h3").text.replace(" Org", "").strip()
+        dead = body[3].find("h3").text.replace(" Org", "").strip()
 
         return {
             "positif": int(positive),
