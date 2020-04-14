@@ -9,11 +9,18 @@ class ParserNTB(ParserBase):
 
     def parse(self, source):
         body = source.find_all("h2", {"class": "price"})
-        data = body[2].text.split()[-1].strip()
+
+        try:
+            index = 2
+            temp = body[index]
+        except:
+            index = 1
+
+        data = body[index].text.split()[-1]
         positive = data.strip()
 
         body = source.find_all("div", {"class": "col-md-4"})
-        data =  body[2].find_all("span")
+        data =  body[index].find_all("span")
         value = [d.text.strip().split()[0] for d in data]
         recover = value[2].strip()
         dead = value[3].strip()
